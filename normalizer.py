@@ -14,8 +14,7 @@ def main():
 
     input_file_name, output_file_name = sys.argv[1], sys.argv[2]
     formatted_csv_lines = read_csv(input_file_name)
-    write_csv(formatted_csv_lines)
-
+    write_csv(output_file_name, formatted_csv_lines)
 
 
 if __name__ == '__main__':
