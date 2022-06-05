@@ -1,5 +1,5 @@
 # truss-interview
-CSV normalization submission for Alexander Do, 
+CSV normalization submission for Alexander Do
 
 Developed in Windows 10, tested in Docker ubuntu:latest container.
 
