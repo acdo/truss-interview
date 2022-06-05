@@ -14,6 +14,7 @@ def contains_invalid_unicode(string: str) -> bool:
 
 def format_timestamp(timestamp: str) -> str:
     # Takes in timestamp string and converts to Eastern timezone in RFC3339 format if valid
+    # Note that we only account for formats in provided samples as those are all we need to handle
 
     if contains_invalid_unicode(timestamp):
         raise ValueError
@@ -31,7 +32,10 @@ def format_address(address: str) -> str:
 
 
 def format_zip(zipcode: str) -> str:
-    # Appends zeroes to zipcode string so it is of length 5
+    # Appends zeroes to zipcode string so it is of length 5 if valid
+
+    if contains_invalid_unicode(zipcode):
+        raise ValueError
 
     zeroes_to_append = 5 - len(zipcode)
     return ('0' * zeroes_to_append) + zipcode
