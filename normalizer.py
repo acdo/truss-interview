@@ -22,13 +22,13 @@ def main():
     try:
         formatted_csv_lines = read_csv(input_file_name)
     except OSError:
-        sys.stderr.write(f'Specified input file {input_file_name} not found, exiting.')
+        sys.stderr.write(f'Specified input file {input_file_name} not found, exiting.\n')
         return
 
     try:
         write_csv(output_file_name, formatted_csv_lines)
     except OSError:
-        sys.stderr.write(f'Output file could not be written, please try again.')
+        sys.stderr.write(f'Output file could not be written, please try again.\n')
 
 
 if __name__ == '__main__':
