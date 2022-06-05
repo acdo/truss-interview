@@ -5,4 +5,4 @@ CSV normalization submission for Alexander Do
 1. Clone this repository to your desired directory.
 2. CD to the aforementioned directory in your terminal.
 3. Place your desired CSV file "input.csv" in the directory.
-4. Run the command "python input.csv output.csv" in your terminal.
+4. Run the command "py normalizer.py input.csv output.csv" in your terminal.
