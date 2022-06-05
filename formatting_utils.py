@@ -1,5 +1,4 @@
-from datetime import datetime
-
+from datetime import datetime, timedelta
 
 REPLACEMENT_CHAR_VALUE = 0xFFFD
 DURATION_FORMAT = '%H:%M:%S.%f'
@@ -15,9 +14,9 @@ def contains_invalid_unicode(string: str) -> bool:
 def format_timestamp(timestamp: str) -> str:
     if contains_invalid_unicode(timestamp):
         raise ValueError
-    datetime_timestamp = datetime.strptime(timestamp, TIMESTAMP_FORMAT)
-    print(datetime_timestamp)
-    return ''
+    western_timestamp = datetime.strptime(timestamp, TIMESTAMP_FORMAT)
+    eastern_timestamp = western_timestamp - timedelta(hours=3)
+    return eastern_timestamp.isoformat('T') + 'Z'
 
 
 def format_address(address: str) -> str:
