@@ -9,6 +9,7 @@ SECONDS_IN_MINUTE = 60
 
 def contains_invalid_unicode(string: str) -> bool:
     # Checks if string has Unicode replacement character, indicating invalid UTF-8 char
+    
     return string.find(chr(REPLACEMENT_CHAR_VALUE)) != -1
 
 
@@ -39,6 +40,7 @@ def format_zip(zipcode: str) -> str:
 
 def format_name(name: str) -> str:
     # Formats name by returning uppercase conversion, taking non-English characters into account
+    
     return name.upper()
 
 
