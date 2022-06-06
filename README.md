@@ -4,7 +4,7 @@ CSV normalization submission for Alexander Do
 Developed in Windows 10, tested in Docker ubuntu:latest container.
 
 ## Prerequisites:
-- Install python on your device: sudo apt install python3
+- Install python on your Linux Ubuntu device: sudo apt install python3
 
 
 ## How to run
