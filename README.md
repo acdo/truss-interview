@@ -14,5 +14,9 @@ Developed in Windows 10, tested in Docker ubuntu:latest container.
 4. Run the command "python3 normalizer.py input.csv output.csv" in your terminal.
 
 ## Follow-ups:
-- Writing tests for each function
+- Writing tests for remaining functions
 - Scaling for larger CSV files
+- Handling edge cases that were not necessary to account for in the scope of this assignment
+  - Missing data
+  - ZIPs with more than 5 digits
+  - Ill-formatted data values
